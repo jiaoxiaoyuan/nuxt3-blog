@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     css: ["@/assets/style/style.scss", "element-plus/dist/index.css"],
 
     modules: [
-        "@nuxt/content",
+        // "@nuxt/content",
         "@pinia/nuxt",
         "nuxt-icon",
         "@nuxtjs/tailwindcss",
@@ -105,6 +105,19 @@ export default defineNuxtConfig({
                 scss: {
                     // additionalData: '@use "@/assets/styles/global.scss" as *;'
                 },
+            },
+        },
+        build: {
+            target: "esnext",
+            terserOptions: {
+                compress: {
+                    drop_console: true, // 生产环境去除console
+                    drop_debugger: true, // 生产环境去除debugger
+                },
+            },
+            esbuild: {
+                pure: ["console.log", "console.info"],
+                drop: ["console", "debugger"],
             },
         },
         plugins: [
