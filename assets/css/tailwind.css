@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import "_variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+body.light-mode {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    --mode-text-color: rgba(0, 0, 0, 0.8);
+    --mode-text-color-hover: #6d28d9;
+    --border-color: #ccc;
+}
+body.dark-mode {
+    background-color: #091a28;
+    color: #ebf4f1;
+    --mode-text-color: #ebf4f1;
+    --mode-text-color-hover: #6d28d9;
+    --border-color: #fff;
+}
+body.sepia-mode {
+    background-color: #f1e7d0;
+    color: #433422;
+    --mode-text-color: #433422;
+    --mode-text-color-hover: #fff;
+    --border-color: #444;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    transform: scale(0.99);
+}
+
+.rainbow-text {
+    --tw-gradient-from: #6d28d9;
+    --tw-gradient-to: rgba(109, 40, 217, 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: #db2777;
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
