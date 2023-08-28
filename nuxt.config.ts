@@ -5,6 +5,9 @@ import IconsResolver from "unplugin-icons/resolver";
 import Icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
 
+import { resolve } from "pathe";
+import { loadEnv } from "vite";
+
 const isDev = process.env.NODE_ENV === "development";
 
 export default defineNuxtConfig({
@@ -108,13 +111,13 @@ export default defineNuxtConfig({
             },
         },
         build: {
-            target: "esnext",
-            terserOptions: {
-                compress: {
-                    drop_console: true, // 生产环境去除console
-                    drop_debugger: true, // 生产环境去除debugger
-                },
-            },
+            // target: "esnext",
+            // terserOptions: {
+            //     compress: {
+            //         drop_console: true, // 生产环境去除console
+            //         drop_debugger: true, // 生产环境去除debugger
+            //     },
+            // },
             esbuild: {
                 pure: ["console.log", "console.info"],
                 drop: ["console", "debugger"],
@@ -164,6 +167,17 @@ export default defineNuxtConfig({
         "vue-renderer:ssr:context"(context) {
             const routePath = JSON.stringify(context.nuxt.routePath);
             context.nuxt = { serverRendered: true, routePath };
+        },
+    },
+    alias: {
+        "@": resolve(__dirname, "./"),
+    },
+    runtimeConfig: {
+        // 运行时常量
+        public: {
+            // 客户端-服务的都能访问
+            baseUrl: loadEnv(process.argv[process.argv.length - 1], "./env")
+                .VITE_API_URL,
         },
     },
 });
