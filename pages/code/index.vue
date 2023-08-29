@@ -1,8 +1,17 @@
 <template>
     <div class="grid-container">
         <div class="grid-item" v-for="(tag, index) in tags" :key="index">
-            <NuxtLink to="">{{ tag.tag_name }}</NuxtLink>
+            <NuxtLink to="/code/list">{{ tag.tag_name }}</NuxtLink>
         </div>
+    </div>
+    <p class="pt-6 pb-2 font-sans font-bold hover:font-serif">今日热榜</p>
+    <div class="grid content-start h-56 grid-cols-3 gap-4 listItem">
+        <div class="h-60 bg-slate-200">01</div>
+        <div class="h-60 bg-slate-200">02</div>
+        <div class="h-60 bg-slate-200">03</div>
+        <div class="h-60 bg-slate-200">04</div>
+        <div class="h-60 bg-slate-200">05</div>
+        <div class="h-60 bg-slate-200">05</div>
     </div>
 </template>
 
@@ -38,7 +47,7 @@ onMounted(async () => {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    height: 100%;
+    height: calc(100vh - 60px - 60px - 20px);
     .grid-item {
         color: #373e4a;
 
@@ -56,5 +65,9 @@ onMounted(async () => {
         flex-direction: row;
         justify-content: center;
     }
+}
+.listItem {
+    width: 100%;
+    height: 100vh;
 }
 </style>

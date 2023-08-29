@@ -17,6 +17,17 @@
             </el-container>
         </el-container>
     </div>
+    <!-- 音乐播放器    data-id="2099017769"-->
+    <div
+        class="aplayer"
+        data-id="3779629"
+        data-server="netease"
+        data-type="playlist"
+        data-fixed="true"
+        data-order="random"
+        data-autoplay="false"
+        data-listfolded="true"
+    ></div>
 </template>
 <script lang="ts" setup>
 onMounted(async () => {
@@ -30,6 +41,9 @@ onMounted(async () => {
 });
 </script>
 <style lang="scss" scoped>
+.aplayer {
+    z-index: 100000;
+}
 .page-layout {
     width: 100%;
     height: 100% !important;
