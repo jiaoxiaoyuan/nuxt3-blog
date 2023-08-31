@@ -18,7 +18,7 @@
         </el-container>
     </div>
     <!-- 音乐播放器    data-id="2099017769"-->
-    <div
+    <!-- <div
         class="aplayer"
         data-id="3779629"
         data-server="netease"
@@ -27,7 +27,7 @@
         data-order="random"
         data-autoplay="false"
         data-listfolded="true"
-    ></div>
+    ></div> -->
 </template>
 <script lang="ts" setup>
 onMounted(async () => {

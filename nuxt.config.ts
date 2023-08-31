@@ -62,22 +62,22 @@ export default defineNuxtConfig({
                     type: "text/css",
                     href: "/loading/loading.min.css",
                 },
-                {
-                    rel: "stylesheet",
-                    href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
-                },
+                // {
+                //     rel: "stylesheet",
+                //     href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
+                // },
             ],
-            script: [
-                {
-                    src: "https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js",
-                },
-                {
-                    src: "http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js",
-                },
-                {
-                    src: "http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js",
-                },
-            ],
+            // script: [
+            //     {
+            //         src: "https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js",
+            //     },
+            //     {
+            //         src: "http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js",
+            //     },
+            //     {
+            //         src: "http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js",
+            //     },
+            // ],
             bodyAttrs: {
                 class: "loading",
             },

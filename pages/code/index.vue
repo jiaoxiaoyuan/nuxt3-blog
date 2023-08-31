@@ -1,8 +1,8 @@
 <template>
     <div class="grid-container">
-        <div class="grid-item" v-for="(tag, index) in tags" :key="index">
+        <!-- <div class="grid-item" v-for="(tag, index) in tags" :key="index">
             <NuxtLink to="/code/list">{{ tag.tag_name }}</NuxtLink>
-        </div>
+        </div> -->
     </div>
     <p class="pt-6 pb-2 font-sans font-bold hover:font-serif">今日热榜</p>
     <div class="grid content-start h-56 grid-cols-3 gap-4 listItem">
@@ -28,15 +28,15 @@ useHead({
 let tags = ref([] as any[]);
 
 // 获取所有的标签
-const getAllTags = async () => {
-    let res = await getTechList();
-    if (res && res.code == 0) {
-        tags.value = res.result;
-    }
-};
+// const getAllTags = async () => {
+//     let res = await getTechList();
+//     if (res && res.code == 0) {
+//         tags.value = res.result;
+//     }
+// };
 
 onMounted(async () => {
-    await getAllTags();
+    // await getAllTags();
 });
 </script>
 
