@@ -137,7 +137,19 @@
 					</el-card>
 				</div>
 			</el-col>
-			<el-col :xs="0" :sm="6"> 信息</el-col>
+			<el-col :xs="0" :sm="6">
+				<div class="fixed">
+					<div class="flex items-center max-w-sm p-6 mx-auto space-x-4 bg-white shadow-lg rounded-xl">
+						<div class="shrink-0">
+							<img class="w-12 h-12" src="@/assets/icons/test.svg" alt="ChitChat Logo" />
+						</div>
+						<div>
+							<div class="text-xl font-medium text-black">ChitChat</div>
+							<p class="text-slate-500">You have a new message!</p>
+						</div>
+					</div>
+				</div>
+			</el-col>
 		</el-row>
 	</div>
 </template>
