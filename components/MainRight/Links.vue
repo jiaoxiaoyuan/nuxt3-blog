@@ -5,9 +5,13 @@
         </div> -->
         <el-row class="link-all line" :gutter="20">
             <!-- <el-col :span="8" v-for="(item, index) in linksData" :key="item" @click="jumpLink(item.link)"> -->
-            <el-col :span="8" v-for="(item, index) in linksData" :key="item">
+            <el-col :span="8" v-for="(item, index) in linksData" :key="index">
                 <NuxtLink :to="item.link">
-                    <div :to="item.link" class="item cards" :style="index < 3 ? 'margin-bottom: 20px' : null">
+                    <div
+                        :to="item.link"
+                        class="item cards"
+                        :style="index < 3 ? 'margin-bottom: 20px' : null"
+                    >
                         <span class="name">{{ item.name }}</span>
                     </div>
                 </NuxtLink>
@@ -17,47 +21,47 @@
 </template>
 
 <script setup>
-const router = useRouter()
+// const router = useRouter();
 
 // 网站链接数据
 // 建议不要超出6个，若需要超出请自行调整样式
 let linksData = [
     {
         // icon: Blog,
-        name: '技术',
-        link: '/code'
+        name: "技术",
+        link: "/code",
     },
 
     {
         // icon: Cloud,
-        name: '生活',
-        link: '/life'
+        name: "生活",
+        link: "/life",
     },
     {
         // icon: CompactDisc,
-        name: '工具',
-        link: '/tools'
+        name: "工具",
+        link: "/tools",
     },
     {
         // icon: Compass,
-        name: '导航',
-        link: '/nav'
+        name: "导航",
+        link: "/nav",
     },
     {
         // icon: Book,
-        name: '交流',
-        link: '/community'
+        name: "交流",
+        link: "/community",
     },
     {
         // icon: Flask,
-        name: '关于',
-        link: '/about'
-    }
-]
+        name: "关于",
+        link: "/me",
+    },
+];
 
 // 链接跳转
-const jumpLink = url => {
-    console.log('tag', url)
+const jumpLink = (url) => {
+    console.log("tag", url);
     // window.open(url, '_blank')
     // router.push({
     //     path: url
@@ -72,10 +76,10 @@ const jumpLink = url => {
         // 延迟跳转，解决浏览器缓存问题
         setTimeout(() => {
             // router.push(url)
-            navigateTo('/code')
-        }, 300)
+            navigateTo("/code");
+        }, 300);
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { makeFirstCharUpper } from "@/utils/helper";
 definePageMeta({
     layout: "about",
 });
@@ -25,26 +24,6 @@ useHead({
         { name: "author", content: "Mr.焦" },
     ],
 });
-const topics = [
-    "javascript",
-    "typescript",
-    "git",
-    "docker",
-    "kubernetes",
-    "vue",
-    "nuxt",
-    "pinia",
-    "vuex",
-    "firebase",
-    "supabse",
-    "cypress",
-    "vercel",
-    "namecheap",
-];
-// const { data: blogNav } = await useAsyncData("navigation", () => {
-//     return fetchContentNavigation(queryContent("lifelist"));
-// });
-// console.log("blogNavblogNav", blogNav);
 </script>
 <style lang="scss" scoped>
 //

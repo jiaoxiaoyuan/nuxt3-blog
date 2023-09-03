@@ -1,42 +1,19 @@
 <template>
     <div class="grid-container">
+        <h1>2455</h1>
         <!-- <div class="grid-item" v-for="(tag, index) in tags" :key="index">
             <NuxtLink to="/code/list">{{ tag.tag_name }}</NuxtLink>
         </div> -->
     </div>
-    <p class="pt-6 pb-2 font-sans font-bold hover:font-serif">今日热榜</p>
-    <div class="grid content-start h-56 grid-cols-3 gap-4 listItem">
-        <div class="h-60 bg-slate-200">01</div>
-        <div class="h-60 bg-slate-200">02</div>
-        <div class="h-60 bg-slate-200">03</div>
-        <div class="h-60 bg-slate-200">04</div>
-        <div class="h-60 bg-slate-200">05</div>
-        <div class="h-60 bg-slate-200">05</div>
-    </div>
 </template>
 
 <script setup lang="ts">
-import { getTechList } from "../../api/info";
 definePageMeta({
     layout: "about",
 });
 useHead({
     title: "技术",
     meta: [{ name: "description", content: "关于我们页面" }],
-});
-
-let tags = ref([] as any[]);
-
-// 获取所有的标签
-// const getAllTags = async () => {
-//     let res = await getTechList();
-//     if (res && res.code == 0) {
-//         tags.value = res.result;
-//     }
-// };
-
-onMounted(async () => {
-    // await getAllTags();
 });
 </script>
 

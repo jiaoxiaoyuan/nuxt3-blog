@@ -48,7 +48,7 @@
         </el-menu-item>
 
         <el-menu-item index="7">
-            <NuxtLink to="/about">
+            <NuxtLink to="/me">
                 <span>关于</span>
             </NuxtLink>
         </el-menu-item>
@@ -67,28 +67,28 @@ const handleClose = (key: string, keyPath: string[]) => {
     console.log("handleClose", key, keyPath);
 };
 
-// watch(
-//     () => router.currentRoute.value,
-//     (newValue: any) => {
-//         let { path } = newValue;
-//         if (path === "/") {
-//             activeIndex.value = "1";
-//         } else if (path === "/code") {
-//             activeIndex.value = "2";
-//         } else if (path === "/life") {
-//             activeIndex.value = "3";
-//         } else if (path === "/tools") {
-//             activeIndex.value = "4";
-//         } else if (path === "/nav") {
-//             activeIndex.value = "5";
-//         } else if (path === "/community") {
-//             activeIndex.value = "6";
-//         } else if (path === "/about") {
-//             activeIndex.value = "7";
-//         }
-//     },
-//     { immediate: true }
-// );
+watch(
+    () => router.currentRoute.value,
+    (newValue: any) => {
+        let { path } = newValue;
+        if (path === "/") {
+            activeIndex.value = "1";
+        } else if (path === "/code") {
+            activeIndex.value = "2";
+        } else if (path === "/life") {
+            activeIndex.value = "3";
+        } else if (path === "/tools") {
+            activeIndex.value = "4";
+        } else if (path === "/nav") {
+            activeIndex.value = "5";
+        } else if (path === "/community") {
+            activeIndex.value = "6";
+        } else if (path === "/me") {
+            activeIndex.value = "7";
+        }
+    },
+    { immediate: true }
+);
 </script>
 
 <style scoped lang="scss">
