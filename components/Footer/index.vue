@@ -3,12 +3,14 @@
         <div class="power" v-show="!store.playerState">
             <span>Copyright Mr焦 </span>
             <!-- 站点备案 -->
-            <a href="https://beian.miit.gov.cn" target="_blank">蜀ICP备17037090号</a>
+            <a href="https://beian.miit.gov.cn" target="_blank"
+                >蜀ICP备17037090号</a
+            >
         </div>
         <div class="lrc" v-show="store.playerState">
             <music-one theme="filled" size="18" fill="#efefef" />
             <span class="lrc-text">
-                {{ store.getPlayerLrc ? store.getPlayerLrc : '这句没有歌词' }}
+                {{ store.getPlayerLrc ? store.getPlayerLrc : "这句没有歌词" }}
             </span>
             <music-one theme="filled" size="18" fill="#efefef" />
         </div>
@@ -16,12 +18,12 @@
 </template>
 
 <script setup>
-import { MusicOne } from '@icon-park/vue-next'
-import { mainStore } from '@/stores'
+import { MusicOne } from "@icon-park/vue-next";
+import { mainStore } from "@/stores";
 // import config from "@/../package.json";
-const store = mainStore()
+const store = mainStore();
 
-let fullYear = new Date().getFullYear()
+let fullYear = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>

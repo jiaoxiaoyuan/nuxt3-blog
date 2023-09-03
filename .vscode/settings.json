@@ -1,4 +1,4 @@
 {
-"css.lint.unknownAtRules": "ignore",
-"vue.codeActions.enabled": false
+    "css.lint.unknownAtRules": "ignore",
+    "vue.codeActions.enabled": false
 }

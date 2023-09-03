@@ -1,14 +1,24 @@
-// remember to fix this issue wint the tailwind/nuxt
-// https://github.com/tailwindlabs/tailwindcss-intellisense/issues/663#issuecomment-1316788128
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [],
+    darkMode: "class",
+    content: [
+        "./components/**/*.{js,vue,ts}",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue",
+        "./plugins/**/*.{js,ts}",
+        "./nuxt.config.{js,ts}",
+        "./app.vue",
+    ],
     theme: {
         extend: {
-            fontFamily: {
-                spacegrotesk: ["Space Grotesk", "sans-serif"],
+            colors: {
+                dark: "rgb(18,18,18)",
             },
         },
+        backgroundColor: (theme) => ({
+            ...theme("colors"),
+            home: "#3490dc",
+        }),
     },
     plugins: [
         require("@tailwindcss/typography"),

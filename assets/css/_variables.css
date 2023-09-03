@@ -1,3 +1,4 @@
 :root {
-    --link-color: #3370ff;
+	--link-color: #3370ff;
+	--el-card-padding: 0 !important;
 }

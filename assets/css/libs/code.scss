@@ -1,0 +1,26 @@
+.container-wap{
+    *,
+    a,
+    p {
+        color: #4e5969;
+        box-sizing: border-box;
+
+        &:hover {
+            transition: 0.3s;
+        }
+    }
+    .article-box{
+        display: flex;
+        align-items: center;
+        height: 10rem;
+
+        .article-cover{
+            width: 45%;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+
+
+}
+
