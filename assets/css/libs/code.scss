@@ -12,12 +12,36 @@
     .article-box{
         display: flex;
         align-items: center;
-        height: 10rem;
+        height: 15rem;
 
         .article-cover{
             width: 45%;
             height: 100%;
             overflow: hidden;
+        }
+
+
+        .article-info{
+            width: 55%;
+            padding: 0 40px;
+            overflow: hidden;
+            display: inline-block;
+
+            .title{
+                display: inline-block;
+                width: 100%;
+                font-size: 1.8rem;
+                color: #676767;
+                font-weight: 600;
+                line-height: 3;
+                transition: .2s ease-in-out;
+            }
+
+            .text_overflow{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
         }
     }
 

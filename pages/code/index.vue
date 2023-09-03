@@ -2,14 +2,14 @@
 	<div class="md:container md:mx-auto container-wap">
 		<el-row>
 			<el-col :xs="24" :sm="18">
-				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-10 backdrop-saturate-50">
+				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-5 backdrop-saturate-50">
 					<el-card class="mobile-top-card mobile-card info-card animate__animated animate__fadeIn" shadow="hover">
 						<el-skeleton :loading="rightSizeLoading" animated>
 							<template #default>
 								<div class="article-box">
 									<div class="article-cover">
 										<div class="flex items-center scale">
-											<div class="relative w-64 h-64">
+											<div class="relative">
 												<img
 													src="http://img.mrzym.top/FswlMLf30bR2MeXCgorQSkUQ3ky1"
 													alt="Your Image"
@@ -18,20 +18,30 @@
 											</div>
 										</div>
 									</div>
+									<div class="article-info">
+										<span class="text-xl antialiased text_overflow">博客开发记录......持续更新</span>
+										<p class="line-clamp-3">
+											Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit incididunt deserunt
+											sunt. Ut ut sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu dolore
+											occaecat excepteur fugiat dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut
+											eiusmod consequat irure quis deserunt ex. Enim laboris dolor magna pariatur. Dolor et ad sint voluptate
+											sunt elit mollit officia ad enim sit consectetur enim.
+										</p>
+									</div>
 								</div>
 							</template>
 						</el-skeleton>
 					</el-card>
 				</div>
 
-				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-1 backdrop-saturate-50">
+				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-5 backdrop-saturate-50">
 					<el-card class="mobile-top-card mobile-card info-card animate__animated animate__fadeIn" shadow="hover">
 						<el-skeleton :loading="rightSizeLoading" animated>
 							<template #default>
 								<div class="article-box">
 									<div class="article-cover">
 										<div class="flex items-center scale">
-											<div class="relative w-64 h-64">
+											<div class="relative">
 												<img
 													src="http://img.mrzym.top/FswlMLf30bR2MeXCgorQSkUQ3ky1"
 													alt="Your Image"
@@ -39,6 +49,87 @@
 												/>
 											</div>
 										</div>
+									</div>
+
+									<div class="article-info">
+										<span class="text-xl antialiased text_overflow">博客开发记录......持续更新</span>
+									</div>
+								</div>
+							</template>
+						</el-skeleton>
+					</el-card>
+				</div>
+
+				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-5 backdrop-saturate-50">
+					<el-card class="mobile-top-card mobile-card info-card animate__animated animate__fadeIn" shadow="hover">
+						<el-skeleton :loading="rightSizeLoading" animated>
+							<template #default>
+								<div class="article-box">
+									<div class="article-cover">
+										<div class="flex items-center scale">
+											<div class="relative">
+												<img
+													src="http://img.mrzym.top/FswlMLf30bR2MeXCgorQSkUQ3ky1"
+													alt="Your Image"
+													class="object-cover w-full h-full transition-transform transform hover:scale-110"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div class="article-info">
+										<span class="text-xl antialiased text_overflow">博客开发记录......持续更新</span>
+									</div>
+								</div>
+							</template>
+						</el-skeleton>
+					</el-card>
+				</div>
+
+				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-10 backdrop-saturate-50">
+					<el-card class="mobile-top-card mobile-card info-card animate__animated animate__fadeIn" shadow="hover">
+						<el-skeleton :loading="rightSizeLoading" animated>
+							<template #default>
+								<div class="article-box">
+									<div class="article-cover">
+										<div class="flex items-center scale">
+											<div class="relative">
+												<img
+													src="http://img.mrzym.top/FswlMLf30bR2MeXCgorQSkUQ3ky1"
+													alt="Your Image"
+													class="object-cover w-full h-full transition-transform transform hover:scale-110"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div class="article-info">
+										<span class="text-xl antialiased text_overflow">博客开发记录......持续更新</span>
+									</div>
+								</div>
+							</template>
+						</el-skeleton>
+					</el-card>
+				</div>
+				<div class="mb-2 mr-4 rounded-md bg-zinc-100 backdrop-opacity-10 backdrop-saturate-50">
+					<el-card class="mobile-top-card mobile-card info-card animate__animated animate__fadeIn" shadow="hover">
+						<el-skeleton :loading="rightSizeLoading" animated>
+							<template #default>
+								<div class="article-box">
+									<div class="article-cover">
+										<div class="flex items-center scale">
+											<div class="relative">
+												<img
+													src="http://img.mrzym.top/FswlMLf30bR2MeXCgorQSkUQ3ky1"
+													alt="Your Image"
+													class="object-cover w-full h-full transition-transform transform hover:scale-110"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div class="article-info">
+										<span class="text-xl antialiased text_overflow">博客开发记录......持续更新</span>
 									</div>
 								</div>
 							</template>
