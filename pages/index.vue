@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { homeGetArticleList } from '@/api/article';
 import { mainStore } from '../stores';
 const store = mainStore();
 useHead({
@@ -38,7 +39,40 @@ useHead({
 	],
 });
 
-onMounted(() => {});
+/** 文章 */
+const param = reactive({
+	current: 1, // 当前页
+	size: 10, // 每页条目数
+	loading: true, // 加载
+});
+
+const articleList = ref([]);
+const articleTotal = ref();
+
+onMounted(async () => {
+	// await init();
+});
+
+const init = async () => {
+	// await getlist('init');
+};
+
+const getlist = async (type: string) => {
+	type == 'init' ? '' : (param.loading = true);
+	let res = await homeGetArticleList(param.current, param.size);
+	if (res.code == 0) {
+		type == 'init' ? '' : (param.loading = false);
+		const { list, total } = res.result;
+
+		console.log(list);
+		articleList.value = list;
+		articleTotal.value = total;
+	}
+};
+
+const res = await useAsyncData(async () => {
+	console.log('useAsyncData');
+});
 </script>
 
 <style lang="scss" scoped>
