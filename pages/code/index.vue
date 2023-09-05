@@ -154,7 +154,8 @@
 	</div>
 </template>
 
-<script setup leng="ts">
+<script setup lang="ts">
+import { homeGetArticleList } from '@/api/article';
 definePageMeta({
 	layout: 'pagecontent',
 });
@@ -174,6 +175,16 @@ useHead({
 	],
 });
 
+/** 文章 */
+const param = reactive({
+	current: 1, // 当前页
+	size: 10, // 每页条目数
+	loading: true, // 加载
+});
+
+const articleList = ref([]);
+const articleTotal = ref();
+
 const rightSizeLoading = ref(true);
 
 onMounted(async () => {
@@ -182,6 +193,21 @@ onMounted(async () => {
 
 const init = async () => {
 	rightSizeLoading.value = false;
+
+	await getlist('init');
+};
+
+const getlist = async (type: any) => {
+	type == 'init' ? '' : (param.loading = true);
+	let res = await homeGetArticleList(param.current, param.size);
+	if (res.code == 0) {
+		type == 'init' ? '' : (param.loading = false);
+		const { list, total } = res.result;
+
+		console.log(list);
+		articleList.value = list;
+		articleTotal.value = total;
+	}
 };
 </script>
 

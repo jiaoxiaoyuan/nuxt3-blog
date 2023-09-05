@@ -10,7 +10,8 @@
 			</div>
 		</div>
 		<!-- 简介 -->
-		<div class="description cards" @click="changeBox">
+		<!-- <div class="description cards" @click="changeBox"> -->
+		<div class="description cards">
 			<div class="content">
 				<!-- <Icon size="16">
                         <QuoteLeft />
@@ -45,7 +46,7 @@
 	</div>
 </template>
 
-<script setup leng="ts">
+<script setup lang="ts">
 import { mainStore } from '@/stores';
 const store = mainStore();
 
@@ -61,20 +62,43 @@ let descriptionText = reactive({
 });
 
 // 切换右侧功能区
-const changeBox = () => {
-	if (store.getInnerWidth >= 990) {
-		store.boxOpenState = !store.boxOpenState;
-	} else {
-		ElMessage({
-			message: '当前页面宽度不足以开启盒子',
-			grouping: true,
-			icon: h(Error, {
-				theme: 'filled',
-				fill: '#efefef',
-			}),
-		});
-	}
-};
+// const changeBox = () => {
+// 	if (store.getInnerWidth >= 990) {
+// 		store.boxOpenState = !store.boxOpenState;
+// 	} else {
+// 		ElMessage({
+// 			message: '当前页面宽度不足以开启盒子',
+// 			grouping: true,
+// 			icon: h(Error, {
+// 				theme: 'filled',
+// 				fill: '#efefef',
+// 			}),
+// 		});
+// 	}
+// };
+
+interface Message {
+	message: string;
+	grouping: boolean;
+	icon: JSX.Element;
+}
+
+// const changeBox = () => {
+// 	if (store.getInnerWidth() >= 990) {
+// 		store.boxOpenState = !store.boxOpenState;
+// 	} else {
+// 		const errorMessage: Message = {
+// 			message: '当前页面宽度不足以开启盒子',
+// 			grouping: true,
+// 			icon: h(Error, {
+// 				theme: 'filled',
+// 				fill: '#efefef',
+// 			}),
+// 		};
+
+// 		ElMessage(errorMessage);
+// 	}
+// };
 
 // 监听状态变化
 watch(

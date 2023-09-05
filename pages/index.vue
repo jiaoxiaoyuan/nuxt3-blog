@@ -53,26 +53,26 @@ onMounted(async () => {
 	// await init();
 });
 
-const init = async () => {
-	// await getlist('init');
-};
+// const init = async () => {
+// await getlist('init');
+// };
 
-const getlist = async (type: string) => {
-	type == 'init' ? '' : (param.loading = true);
-	let res = await homeGetArticleList(param.current, param.size);
-	if (res.code == 0) {
-		type == 'init' ? '' : (param.loading = false);
-		const { list, total } = res.result;
+// const getlist = async (type: string) => {
+// 	type == 'init' ? '' : (param.loading = true);
+// 	let res = await homeGetArticleList(param.current, param.size);
+// 	if (res.code == 0) {
+// 		type == 'init' ? '' : (param.loading = false);
+// 		const { list, total } = res.result;
 
-		console.log(list);
-		articleList.value = list;
-		articleTotal.value = total;
-	}
-};
+// 		console.log(list);
+// 		articleList.value = list;
+// 		articleTotal.value = total;
+// 	}
+// };
 
-const res = await useAsyncData(async () => {
-	console.log('useAsyncData');
-});
+// const res = await useAsyncData(async () => {
+// 	console.log('useAsyncData');
+// });
 </script>
 
 <style lang="scss" scoped>
