@@ -40,7 +40,7 @@ export const mainStore = defineStore('main', {
 	},
 	actions: {
 		// 更改当前页面宽度
-		setInnerWidth(value) {
+		setInnerWidth(value: any) {
 			this.innerWidth = value;
 			if (value >= 720) {
 				this.mobileOpenState = false;
@@ -48,7 +48,7 @@ export const mainStore = defineStore('main', {
 			}
 		},
 		// 更改播放状态
-		setPlayerState(value) {
+		setPlayerState(value: boolean) {
 			if (value) {
 				this.playerState = false;
 			} else {
@@ -56,11 +56,11 @@ export const mainStore = defineStore('main', {
 			}
 		},
 		// 更改歌词
-		setPlayerLrc(value) {
+		setPlayerLrc(value: string) {
 			this.playerLrc = value;
 		},
 		// 更改歌曲数据
-		setPlayerData(title, artist) {
+		setPlayerData(title: any, artist: any) {
 			this.playerTitle = title;
 			this.playerArtist = artist;
 		},
