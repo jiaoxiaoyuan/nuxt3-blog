@@ -1,0 +1,12 @@
+.el-card {
+    padding: 0 !important;
+
+    :deep(.el-card__body) {
+        padding: 0 !important;
+    }
+}
+
+
+:global(.el-card) {
+    padding: 0 !important;
+}

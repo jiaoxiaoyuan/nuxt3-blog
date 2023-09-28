@@ -1,8 +1,8 @@
 module.exports = {
-    apps: [
-        {
-            name: 'NuxtAppName',
-            script: './.output/server/index.mjs'
-        }
-    ]
-}
+	apps: [
+		{
+			name: 'NuxtAppName',
+			script: './.output/server/index.mjs',
+		},
+	],
+};
