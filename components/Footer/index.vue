@@ -51,6 +51,10 @@ footer {
 	.power {
 		animation: fade;
 		-webkit-animation: fade 0.3s;
+		span,
+		a {
+			color: #fff;
+		}
 	}
 	.lrc {
 		padding: 0 20px;
