@@ -5,7 +5,7 @@ import axios from 'axios';
  */
 
 // 获取音乐播放列表
-export const getPlayerList = async (server, type, id) => {
+export const getPlayerList = async (server: any, type: any, id: any) => {
 	const res = await fetch(`${import.meta.env.VITE_SONG_API}?server=${server}&type=${type}&id=${id}`);
 	return await res.json();
 };
@@ -32,7 +32,7 @@ export const getAdcode = async () => {
 };
 
 // 获取高德地理天气信息
-export const getWeather = async (key, city) => {
+export const getWeather = async (city: string, key?: any) => {
 	const res = await fetch(`https://restapi.amap.com/v3/weather/weatherInfo?key=e69302e37f8d7e0b968e030dd2ee3fd3&city=${city}`);
 	return await res.json();
 };
