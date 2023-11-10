@@ -23,4 +23,16 @@ module.exports = {
 		// subject 大小写不做校验
 		'subject-case': [0],
 	},
+	plugins: [
+		{
+			rules: {
+				'commit-rule': ({ raw }) => {
+					return [
+						/^\[(feat|fix|add|del|update|docs|style|build|refactor|revert|test|perf|chore)].+/g.test(raw),
+						`commit备注信息格式错误，格式为 <[type] 修改内容>，type支持${types.join(',')}`,
+					];
+				},
+			},
+		},
+	],
 };
