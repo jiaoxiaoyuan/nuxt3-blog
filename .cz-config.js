@@ -1,16 +1,13 @@
 module.exports = {
 	// 可选类型
 	types: [
-		{ value: 'feat', name: '新功能:                 新功能' },
-		{ value: 'fix', name: '修复:                    修复' },
-		{ value: 'docs', name: '文档变更:               文档变更' },
-		{ value: 'style', name: '代码格式:              代码格式(不影响代码运行的变动)' },
-		{
-			value: 'refactor',
-			name: '重构:                               重构(既不是增加feature，也不是修复bug)',
-		},
-		{ value: 'perf', name: '性能优化:               性能优化' },
-		{ value: 'test', name: '增加测试:               增加测试' },
+		{ value: 'feat', name: '新功能:                  新功能' },
+		{ value: 'fix', name: '修复:                     修复' },
+		{ value: 'docs', name: '文档变更:                文档变更' },
+		{ value: 'style', name: '代码格式:               代码格式(不影响代码运行的变动)' },
+		{ value: 'refactor', name: '重构:               重构(既不是增加feature，也不是修复bug)' },
+		{ value: 'perf', name: '性能优化:                性能优化' },
+		{ value: 'test', name: '增加测试:                增加测试' },
 		{ value: 'chore', name: '构建:                  构建过程或辅助工具的变动' },
 		{ value: 'revert', name: '回退:                 回退' },
 		{ value: 'build', name: '打包:                  打包' },
