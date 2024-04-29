@@ -46,7 +46,7 @@ export default defineNuxtConfig({
 		pageTransition: { name: 'page', mode: 'out-in' },
 		layoutTransition: { name: 'layout', mode: 'out-in' },
 	},
-	devtools: { enabled: process.env.DEV_TOOLS || false },
+	devtools: { enabled: false },
 	devServer: {
 		port: 3005,
 	},

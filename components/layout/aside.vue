@@ -1,7 +1,7 @@
 <template>
 	<div class="text-center">
 		<div class="rounded-full">
-			<img src="http://img.mtswk.cn/LightPicture/2023/08/749568009e7b596f.png" alt="Profile image" />
+			<img src="http://img.mtsws.cn/LightPicture/2023/08/749568009e7b596f.png" alt="Profile image" />
 		</div>
 		<div class="font-bold">Mr 焦</div>
 	</div>
